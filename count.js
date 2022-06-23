@@ -2,7 +2,7 @@
 const daysel = document.getElementById('days');
 const hoursel = document.getElementById('hours'); 
 const minutesel = document.getElementById('minutes');
-const secoundsel = document.getElementById('secounds');
+const secondsel = document.getElementById('seconds');
 
 const birthday = "7 jul 2022";
 
@@ -20,7 +20,7 @@ function count(){
     daysel.innerHTML = format(days);
     hoursel.innerHTML = format(hours);
     minutesel.innerHTML =format(min);
-    secoundsel.innerHTML =format(sec);
+    secondsel.innerHTML =format(sec);
 
 }
 
@@ -31,6 +31,6 @@ function format(time){
     count();
     setInterval(count,1000);
 
-if(bday <= cdate){
+if(bday == cdate){
     document.getElementById('cc').innerHTML = "happy brithday";
 }
