@@ -1,75 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>countdown</title>
     <style>
-        html{
+
+        html {
             padding: 0;
             margin: 0;
             font-size: 30px;
-            font-family:'Comic Sans MS';
+            font-family: 'Comic Sans MS';
             height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        body{
-            background-image: url(j.webp);
+
+        body {
+            background-color: #fce043;
+            background-image: linear-gradient(315deg, #fce043 0%, #fb7ba2 74%);
             background-repeat: no-repeat;
             background-size: cover;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
             padding: 0;
             margin: 0;
         }
-        .header{
-            color:white;
-            font-size: 1rem;
-            border-radius: 1em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 80%;
-            width: 100%;
-            height: 3em;
 
-        }
-        .cc{
-            min-height: 90vh;
+        .cc {
+            border-radius: 60px;
+            background: transparent;
+            box-shadow: -28px -28px 56px #aa536d,
+                28px 28px 56px #cccc46;
+            line-height: 0;
             display: flex;
-            flex-direction:row;
+            flex-direction: row;
             flex-wrap: wrap;
-            align-items: center;
             justify-content: center;
-            gap:2em;
+            gap: 2em;
             color: white;
+            width: 25em;
+            height: 15em;
         }
-        .big{
+
+        .big {
+            display: flex;
+            justify-content: center;
+            height: 0.2em;
             font-size: 2.5rem;
-            margin: 0;
+            margin-top: 0 !important;
+        }
+
+        h1 {
+            line-height: 2;
+        }
+
+        @media only screen and (max-width: 765px) {
+            .cc {
+                width: 20em;
+                height: 15em;
+                gap :1em;
+            }
+            .big{
+            height: 0.2em;
+            font-size: 2rem;
+            }
+        }
+        @media only screen and (max-width: 643px) {
+            .cc {
+                width: 15em;
+                height: 16em;
+                gap :1.2em;
+                font-size: 1rem;
+
+            }
+            .big{
+            font-size: 1.5rem;
+            }
+        }
+        @media only screen and (max-width: 478px) {
+            .cc {
+                width: 17em;
+                height: 18em;
+                gap :1em;
+                font-size: 0.6rem;
+                padding-bottom: 2px;
+            }
+            .big{
+            font-size: 0.9rem;
+            }
         }
     </style>
 </head>
+
 <body>
-    <div class="header"><b>
-       HAPPY BIRTHDAY</b>
-    </div>
     <div class="cc" id="cc">
-        <div class="days"> 
+        <h1> sonu's birthday on..</h1><br>
+        <div>
             <p class="big" id="days">0</p>
             <b>days</b>
         </div>
-        <div class="hours">
+        <div>
             <p class="big" id="hours">0</p>
             <b>hours</b>
         </div>
-        <div class="minutes">
+        <div>
             <p class="big" id="minutes">0</p>
-            <b>minutes</b>
+            <b>min</b>
         </div>
-        <div class="secounds">
-            <p class="big" id="secounds">0</p>
-            <b>secounds</b>
+        <div>
+            <p class="big" id="seconds">0</p>
+            <b>sec</b>
         </div>
     </div>
     <script src="count.js"></script>
 </body>
+
 </html>
